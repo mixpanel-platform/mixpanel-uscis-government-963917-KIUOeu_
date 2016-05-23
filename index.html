@@ -1,15 +1,1569 @@
 <!DOCTYPE html>
-<html>
+<html style="height: auto;">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/ac3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="https://d621cde4587c562960fbe230744f42dc2304ca4f.googledrive.com/host/0BxwayM8qQaCVX0w4RExCOVdhbzQ">
+    <link rel="stylesheet" type="text/css" href="https://a7fd22d7f1e3c3ec503950ff3eb0ca354866665d.googledrive.com/host/0BxwayM8qQaCVMk14UTA0V2JuSVU">
+    <link rel="stylesheet" type="text/css" href="https://5a4961e5c9f1459a1c463234568af125d8e1b386.googledrive.com/host/0BxwayM8qQaCVRmRCSDlXUUtMMnc/">
+    <link rel="stylesheet" type="text/css" href="https://201420392a7158f07d53a8f3e71606645ab03bd2.googledrive.com/host/0BxwayM8qQaCVQldvY2U5Um9FN3M">
+    <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
   </head>
-  <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
-    <script>
-      // Run queries and display results here
+  <body class="mixpanel-platform-body" style="height: auto">
+    <div class="mixpanel-platform-section">
+      <div class="content-wrapper">
+            <div class="content-heading text-center clearfix">
+               <!-- START Language list-->
+               <div class="pull-right" style="bottom: 10px;">
+                  <img src="https://d018d7277c9a2a72c253b637c4abe4d24d29449c.googledrive.com/host/0BxwayM8qQaCVOGZvekkxYTNSZVU" height="40px" width="120px">
+                  
+               </div>
+               <div class="pull-left">
+                  
+                  
+               </div>
+               <!-- END Language list    -->
+               Central Dashboard
+               <small data-localize="dashboard.WELCOME"></small>
+            </div>
+            <!-- START widgets box-->
+            <div class="row">
+               <div class="col-lg-3 col-sm-3">
+                  <!-- START widget-->
+                  <div class="panel widget bg-primary">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
+                           <em class="icon-speedometer fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h2 mt0 current-users text-center">0</div>
+                           <div class="text-uppercase text-center" style="font-size: 10px;">New Users Today</div>
+                        </div>
+                     </div>
+                  </div><!-- end panel widget bg-primary-->
+               </div>
+               <div class="col-lg-3 col-sm-3">
+                  <!-- START widget-->
+                  <div class="panel widget bg-purple">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-purple-dark pv-lg">
+                            <em class="icon-calendar fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h2 mt0 monthly-actives text-center">0
+                              <!--<small>GB</small>-->
+                           </div>
+                           <div class="text-uppercase text-center">MAU'S</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-sm-3">
+                  <!-- START widget-->
+                  <div class="panel widget bg-green">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-green-dark pv-lg">
+                            <em class="icon-users fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h2 mt0 daily-actives text-center">0</div>
+                           <div class="text-uppercase text-center">DAU'S</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-sm-3">
+                  <!-- START date widget-->
+                  <div class="panel widget">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-green pv-lg">
+                           <!-- See formats: https://docs.angularjs.org/api/ng/filter/date-->
+                           <div data-now="" data-format="MMMM" class="text-sm date-month text-center"></div>
+                           <br>
+                           <div data-now="" data-format="D" class="h2 mt0 date-day text-center"></div>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div data-now="" data-format="dddd" class="text-uppercase date-actual-day text-center"></div>
+                           <br>
+                           <div data-now="" data-format="h:mm" class="h2 mt0 date-time"></div>
+                           <div data-now="" data-format="a" class="text-muted text-sm date-pm"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- END date widget    -->
+               </div>
+            </div>
+
+      <!--<div style="clear: both;"></div>-->
+      <div class="actives clearfix" style="margin: auto; max-width: 98%;">
+        <div style="float: left;  padding-top: 7px; padding-bottom: 7px; padding-right: 3px; max-width: 48%;" id="weeklyActiveUsers" align="right"></div>
+        <div style="float: right;  padding-top: 7px; padding-bottom: 7px; padding-left: 3px; max-width: 48%;" id="monthlyActiveUsers" align="left"></div>
+      </div>
+      <div class="newUsers clearfix" style="margin: auto; max-width: 98%;">
+        <div style="float: left;  padding-top: 7px; padding-bottom: 7px; padding-right: 3px; max-width: 48%;" id="weeklyNewUsers" align="right"></div>
+        <div style="float: right;  padding-top: 7px; padding-bottom: 7px; padding-left: 3px; max-width: 48%;" id="monthlyNewUsers" align="left"></div>
+      </div>
+      <div class="newUsersOverActiveUsers clearfix" style="margin: auto; max-width: 98%;">
+        <div style="float: left;  padding-top: 7px; padding-bottom: 7px; padding-right: 3px; max-width: 48%;"  id="weeklyActiveAndNewPercentage" align="right"></div>
+        <div style="float: right;  padding-top: 7px; padding-bottom: 7px; padding-left: 3px; max-width: 48%;" id="MonthlyActiveAndNewPercentage" align="left"></div>
+      </div>
+      <div class="DAUsMAUs clearfix" style="margin: auto; max-width: 98%;">
+        <div style="float: left;  padding-top: 7px; padding-bottom: 20px; padding-right: 3px; max-width: 48%;" id="dau-over-mau-graph" align="right"></div>
+        <div style="float: right;  padding-top: 7px; padding-bottom: 20px; padding-left: 3px; max-width: 48%;" id="dau-over-mau-graph-2" align="left"></div>
+      </div>
+      <div id="graph" style="padding-top: 7px; padding-bottom: 7px; max-height: 700px;"></div>
+    </div>
+    <script id="cq-new-users-today">
+      //var date = new Date().toISOString().split('T')[0].split('-')
+      var today = Math.round(new Date().getTime())
+      var paramsToday = new Date().toISOString().split('T')[0]
+      var a = new Date();
+      a.setDate(a.getDate() - 84);
+      var twelveWeeks = new Date(a).toISOString().split('T')[0]
+      params = {
+        "startDate": twelveWeeks,
+        "endDate": paramsToday
+      }
+      function main(){
+        return Events({
+          from_date: params.startDate, 
+          to_date: params.endDate
+        })
+        .groupByUser(function(count, events){
+            count = count || {"eventCount": 0, "eventTime":""};
+            count.eventCount = events.length;
+            if(events.length >= 5){
+              count.eventTime = events[4].time
+            }
+            return count
+        })
+        // filter out days where a user sent < 5 events
+        .filter(function(user) {
+          return user.value.eventCount >= 5;
+        })
+        .groupBy([function(collection){
+          var stringDate = new Date(collection.value.eventTime).toISOString().split('T')[0]
+          if(stringDate === paramsToday){
+              return stringDate
+          }else{return "Old Users"}
+        }], mixpanel.reducer.count())
+        
+        };
     </script>
+    <script id="cq-weekly-new-users">
+      
+      var today = Math.round(new Date().getTime())
+      var date = new Date().toISOString().split('T')[0]
+      var a = new Date();
+      a.setDate(a.getDate() - 84);
+      var twelveWeeks = new Date(a).toISOString().split('T')[0]
+
+        params = {
+          "startDate":twelveWeeks,
+          "endDate": date
+        }
+
+        function main() {
+          return Events({
+            from_date: params.startDate, 
+            to_date: params.endDate
+          })
+          // group each user's events by the day they were triggered,
+          // and count how many events they sent each day
+          .groupByUser(function(count, events) {
+            count = count || {"eventCount": 0, "eventTime":""};
+            count.eventCount = events.length;
+            if(events.length >= 5){
+              count.eventTime = events[4].time
+            }
+            return count
+          })
+          //filter out days where a user sent < 5 events
+          .filter(function(user_count) {
+            return user_count.value.eventCount >= 5;
+          })
+          .groupBy([function(event){
+          //var firstDate = new Date(collection.value.eventTime).toISOString().substr(0, 7);
+           var time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            var firstWeek = time.getDate() - time.getDay() + 1; // First day is the day of the month - the day of the week, monday being the first day in the week
+            var thisWeek = time.setDate(firstWeek)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var twoWeeksAgo = time.setDate(firstWeek-7)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var threeWeeksAgo = time.setDate(firstWeek-14)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var fourWeeksAgo = time.setDate(firstWeek-21)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var fiveWeeksAgo = time.setDate(firstWeek-28)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var sixWeeksAgo = time.setDate(firstWeek-35)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var sevenWeeksAgo = time.setDate(firstWeek-42)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var eightWeeksAgo = time.setDate(firstWeek-49)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var nineWeeksAgo = time.setDate(firstWeek-56)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var tenWeeksAgo = time.setDate(firstWeek-63)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var elevenWeeksAgo = time.setDate(firstWeek-70)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            twelveWeeksAgo = time.setDate(firstWeek-77)
+            
+            if (event.value.eventTime > thisWeek){
+              var thisWeekResult =  new Date(thisWeek).toISOString().split('T')[0]
+              thisWeekResult = thisWeekResult.split("-")
+              thisWeekResult = thisWeekResult[1] + "-" + thisWeekResult[2]
+              return thisWeekResult
+            }else if(event.value.eventTime < thisWeek && event.value.eventTime > twoWeeksAgo){
+              var twoWeeksAgoResult = new Date(twoWeeksAgo).toISOString().split('T')[0]
+              twoWeeksAgoResult = twoWeeksAgoResult.split("-")
+              twoWeeksAgoResult = twoWeeksAgoResult[1] + "-" + twoWeeksAgoResult[2]
+              return twoWeeksAgoResult
+            }else if(event.value.eventTime < twoWeeksAgo && event.value.eventTime > threeWeeksAgo){
+              var threeWeeksAgoResult = new Date(threeWeeksAgo).toISOString().split('T')[0]
+              threeWeeksAgoResult = threeWeeksAgoResult.split("-")
+              threeWeeksAgoResult = threeWeeksAgoResult[1] + "-" + threeWeeksAgoResult[2]
+              return threeWeeksAgoResult
+            }else if(event.value.eventTime < threeWeeksAgo && event.value.eventTime > fourWeeksAgo) {
+              var fourWeeksAgoResult = new Date(fourWeeksAgo).toISOString().split('T')[0]
+              fourWeeksAgoResult = fourWeeksAgoResult.split("-")
+              fourWeeksAgoResult = fourWeeksAgoResult[1] + "-" + fourWeeksAgoResult[2]
+              return fourWeeksAgoResult
+            }else if(event.value.eventTime < fourWeeksAgo && event.value.eventTime > fiveWeeksAgo){
+              var fiveWeeksAgoResult = new Date(fiveWeeksAgo).toISOString().split('T')[0]
+              fiveWeeksAgoResult = fiveWeeksAgoResult.split("-")
+              fiveWeeksAgoResult = fiveWeeksAgoResult[1] + "-" + fiveWeeksAgoResult[2]
+              return fiveWeeksAgoResult
+            }else if(event.value.eventTime < fiveWeeksAgo && event.value.eventTime > sixWeeksAgo){
+              var sixWeeksAgoResult = new Date(sixWeeksAgo).toISOString().split('T')[0]
+              sixWeeksAgoResult = sixWeeksAgoResult.split("-")
+              sixWeeksAgoResult = sixWeeksAgoResult[1] + "-" + sixWeeksAgoResult[2]
+              return sixWeeksAgoResult
+            }else if(event.value.eventTime < sixWeeksAgo && event.value.eventTime > sevenWeeksAgo){
+              var sevenWeeksAgoResult = new Date(sevenWeeksAgo).toISOString().split('T')[0]
+              sevenWeeksAgoResult = sevenWeeksAgoResult.split("-")
+              sevenWeeksAgoResult = sevenWeeksAgoResult[1] + "-" + sevenWeeksAgoResult[2]
+              return sevenWeeksAgoResult
+            }else if(event.value.eventTime < sevenWeeksAgo && event.value.eventTime > eightWeeksAgo){
+              var eightWeeksAgoResult = new Date(eightWeeksAgo).toISOString().split('T')[0]
+              eightWeeksAgoResult = eightWeeksAgoResult.split("-")
+              eightWeeksAgoResult = eightWeeksAgoResult[1] + "-" + eightWeeksAgoResult[2]
+              return eightWeeksAgoResult
+            }else if(event.value.eventTime < eightWeeksAgo && event.value.eventTime > nineWeeksAgo){
+              var nineWeeksAgoResult = new Date(nineWeeksAgo).toISOString().split('T')[0]
+              nineWeeksAgoResult = nineWeeksAgoResult.split("-")
+              nineWeeksAgoResult = nineWeeksAgoResult[1] + "-" + nineWeeksAgoResult[2]
+              return nineWeeksAgoResult
+            }else if(event.value.eventTime < nineWeeksAgo && event.value.eventTime > tenWeeksAgo){
+              var tenWeeksAgoResult = new Date(tenWeeksAgo).toISOString().split('T')[0]
+              tenWeeksAgoResult = tenWeeksAgoResult.split("-")
+              tenWeeksAgoResult = tenWeeksAgoResult[1] + "-" + tenWeeksAgoResult[2]
+              return tenWeeksAgoResult
+            }else if(event.value.eventTime < tenWeeksAgo && event.value.eventTime > elevenWeeksAgo){
+              var elevenWeeksAgoResult = new Date(elevenWeeksAgo).toISOString().split('T')[0]
+              elevenWeeksAgoResult = elevenWeeksAgoResult.split("-")
+              elevenWeeksAgoResult = elevenWeeksAgoResult[1] + "-" + elevenWeeksAgoResult[2]
+              return elevenWeeksAgoResult
+            }else if (event.value.eventTime < elevenWeeksAgo && event.value.eventTime > twelveWeeksAgo){
+               var twelveWeeksAgoResult = new Date(twelveWeeksAgo).toISOString().split('T')[0]
+              twelveWeeksAgoResult = twelveWeeksAgoResult.split("-")
+              twelveWeeksAgoResult = twelveWeeksAgoResult[1] + "-" + twelveWeeksAgoResult[2]
+              return twelveWeeksAgoResult
+            }else{}
+        }], mixpanel.reducer.count());
+        }
+    </script>
+    <script id="cq-monthly-new-users">
+      
+      var date = new Date().toISOString().split('T')[0]
+      var a = new Date();
+      var nineMonthsAgo = new Date(a.getFullYear(), a.getMonth()-8, a.getDay()).toISOString().split('T')[0];
+
+      params = {
+        "startDate":nineMonthsAgo,
+        "endDate": date
+      }
+      function main(){
+        return Events({
+          from_date: params.startDate, 
+          to_date: params.endDate
+        })
+        .groupByUser(function(count, events){
+            count = count || {"eventCount": 0, "eventTime":""};
+            count.eventCount = events.length;
+            if(events.length >= 5){
+              count.eventTime = events[4].time
+            }
+            return count
+        })
+        //filter out users with less than 5 events
+        .filter(function(user){
+          return user.value.eventCount >= 5
+        })
+        .groupBy([function(collection){
+          var firstDate = new Date(collection.value.eventTime).toISOString().substr(0, 7);
+            return firstDate
+        }], mixpanel.reducer.count())   
+        };
+      function getMonth(event) {
+        return new Date(event.time).toISOString().substr(0, 7);
+      }
+    </script>
+    <script id="cq-monthly-active-users">
+      /* ========================================================
+       * Monthly active users
+       * How many users sent any event in a given month?
+       */
+      var today = Math.round(new Date().getTime())
+      var date = new Date().toISOString().split('T')[0]
+
+      var a = new Date();
+      var sixMonths = new Date(a.getFullYear(), a.getMonth()-5, 1).toISOString().split('T')[0];
+      params = {
+        "startDate":sixMonths,
+        "endDate": date
+      }
+
+      function main() {
+        return Events({
+          from_date: params.startDate, 
+          to_date: params.endDate
+        })
+        // group each user's events by the day they were triggered,
+        // and count how many events they sent each day
+        .groupByUser([getDay], function(count, events) {
+          count = count || 0;
+          return count + events.length;
+        })
+        //filter out days where a user sent < 2 events
+        .filter(function(user_count) {
+          return user_count.value >= 2;
+        })
+        .groupBy(["key.1"], mixpanel.reducer.count());
+      }
+
+      function getDay(event) {
+        return new Date(event.time).toISOString().substr(0, 7);
+      }
+    </script>
+    <script id="cq-weekly-active-users">
+      /* ========================================================
+       * Weekly active users
+       * How many users sent any event in the last 12 weeks?
+       */
+      var today = Math.round(new Date().getTime())
+      var date = new Date().toISOString().split('T')[0]
+      var a = new Date();
+      a.setDate(a.getDate() - 84);
+      var twelveWeeks = new Date(a).toISOString().split('T')[0]
+
+        params = {
+          "startDate":twelveWeeks,
+          "endDate": date
+        }
+
+        function main() {
+          return Events({
+            from_date: params.startDate, 
+            to_date: params.endDate
+          })
+          // group each user's events by the day they were triggered,
+          // and count how many events they sent each day
+          .groupByUser([setWeek], function(count, events) {
+            count = count || 0;
+            return count + events.length;
+          })
+          //filter out days where a user sent < 2 events
+          .filter(function(user_count) {
+            return user_count.value >= 2;
+          })
+          .groupBy(["key.1"], mixpanel.reducer.count());
+        }
+
+        function setWeek(event) {
+            var time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            var firstWeek = time.getDate() - time.getDay() + 1; // First day is the day of the month - the day of the week, monday being the first day in the week
+            var thisWeek = time.setDate(firstWeek)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var twoWeeksAgo = time.setDate(firstWeek-7)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var threeWeeksAgo = time.setDate(firstWeek-14)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var fourWeeksAgo = time.setDate(firstWeek-21)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var fiveWeeksAgo = time.setDate(firstWeek-28)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var sixWeeksAgo = time.setDate(firstWeek-35)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var sevenWeeksAgo = time.setDate(firstWeek-42)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var eightWeeksAgo = time.setDate(firstWeek-49)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var nineWeeksAgo = time.setDate(firstWeek-56)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var tenWeeksAgo = time.setDate(firstWeek-63)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            var elevenWeeksAgo = time.setDate(firstWeek-70)
+            time = new Date().setHours(0,0,0,0);
+            time = new Date(time)
+            firstWeek = time.getDate() - time.getDay() + 1
+            twelveWeeksAgo = time.setDate(firstWeek-77)
+            
+            if (event.time > thisWeek){
+              var thisWeekResult =  new Date(thisWeek).toISOString().split('T')[0]
+              thisWeekResult = thisWeekResult.split("-")
+              thisWeekResult = thisWeekResult[1] + "-" + thisWeekResult[2]
+              return thisWeekResult
+            }else if(event.time < thisWeek && event.time > twoWeeksAgo){
+              var twoWeeksAgoResult = new Date(twoWeeksAgo).toISOString().split('T')[0]
+              twoWeeksAgoResult = twoWeeksAgoResult.split("-")
+              twoWeeksAgoResult = twoWeeksAgoResult[1] + "-" + twoWeeksAgoResult[2]
+              return twoWeeksAgoResult
+            }else if(event.time < twoWeeksAgo && event.time > threeWeeksAgo){
+              var threeWeeksAgoResult = new Date(threeWeeksAgo).toISOString().split('T')[0]
+              threeWeeksAgoResult = threeWeeksAgoResult.split("-")
+              threeWeeksAgoResult = threeWeeksAgoResult[1] + "-" + threeWeeksAgoResult[2]
+              return threeWeeksAgoResult
+            }else if(event.time < threeWeeksAgo && event.time > fourWeeksAgo) {
+              var fourWeeksAgoResult = new Date(fourWeeksAgo).toISOString().split('T')[0]
+              fourWeeksAgoResult = fourWeeksAgoResult.split("-")
+              fourWeeksAgoResult = fourWeeksAgoResult[1] + "-" + fourWeeksAgoResult[2]
+              return fourWeeksAgoResult
+            }else if(event.time < fourWeeksAgo && event.time > fiveWeeksAgo){
+              var fiveWeeksAgoResult = new Date(fiveWeeksAgo).toISOString().split('T')[0]
+              fiveWeeksAgoResult = fiveWeeksAgoResult.split("-")
+              fiveWeeksAgoResult = fiveWeeksAgoResult[1] + "-" + fiveWeeksAgoResult[2]
+              return fiveWeeksAgoResult
+            }else if(event.time < fiveWeeksAgo && event.time > sixWeeksAgo){
+              var sixWeeksAgoResult = new Date(sixWeeksAgo).toISOString().split('T')[0]
+              sixWeeksAgoResult = sixWeeksAgoResult.split("-")
+              sixWeeksAgoResult = sixWeeksAgoResult[1] + "-" + sixWeeksAgoResult[2]
+              return sixWeeksAgoResult
+            }else if(event.time < sixWeeksAgo && event.time > sevenWeeksAgo){
+              var sevenWeeksAgoResult = new Date(sevenWeeksAgo).toISOString().split('T')[0]
+              sevenWeeksAgoResult = sevenWeeksAgoResult.split("-")
+              sevenWeeksAgoResult = sevenWeeksAgoResult[1] + "-" + sevenWeeksAgoResult[2]
+              return sevenWeeksAgoResult
+            }else if(event.time < sevenWeeksAgo && event.time > eightWeeksAgo){
+              var eightWeeksAgoResult = new Date(eightWeeksAgo).toISOString().split('T')[0]
+              eightWeeksAgoResult = eightWeeksAgoResult.split("-")
+              eightWeeksAgoResult = eightWeeksAgoResult[1] + "-" + eightWeeksAgoResult[2]
+              return eightWeeksAgoResult
+            }else if(event.time < eightWeeksAgo && event.time > nineWeeksAgo){
+              var nineWeeksAgoResult = new Date(nineWeeksAgo).toISOString().split('T')[0]
+              nineWeeksAgoResult = nineWeeksAgoResult.split("-")
+              nineWeeksAgoResult = nineWeeksAgoResult[1] + "-" + nineWeeksAgoResult[2]
+              return nineWeeksAgoResult
+            }else if(event.time < nineWeeksAgo && event.time > tenWeeksAgo){
+              var tenWeeksAgoResult = new Date(tenWeeksAgo).toISOString().split('T')[0]
+              tenWeeksAgoResult = tenWeeksAgoResult.split("-")
+              tenWeeksAgoResult = tenWeeksAgoResult[1] + "-" + tenWeeksAgoResult[2]
+              return tenWeeksAgoResult
+            }else if(event.time < tenWeeksAgo && event.time > elevenWeeksAgo){
+              var elevenWeeksAgoResult = new Date(elevenWeeksAgo).toISOString().split('T')[0]
+              elevenWeeksAgoResult = elevenWeeksAgoResult.split("-")
+              elevenWeeksAgoResult = elevenWeeksAgoResult[1] + "-" + elevenWeeksAgoResult[2]
+              return elevenWeeksAgoResult
+            }else if (event.time < elevenWeeksAgo && event.time > twelveWeeksAgo){
+               var twelveWeeksAgoResult = new Date(twelveWeeksAgo).toISOString().split('T')[0]
+              twelveWeeksAgoResult = twelveWeeksAgoResult.split("-")
+              twelveWeeksAgoResult = twelveWeeksAgoResult[1] + "-" + twelveWeeksAgoResult[2]
+              return twelveWeeksAgoResult
+            }else{}
+        }
+    </script>
+    <script id="cq-daily-active-lastMonth">
+      var today = new Date();
+      var lastDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 0).toISOString().split('T')[0];
+
+      var a = new Date();
+      var lastMonth = new Date(a.getFullYear(), a.getMonth()-1, 1).toISOString().split('T')[0];
+      params = {
+        "startDate":lastMonth,
+        "endDate": lastDayOfMonth
+      }
+
+      function main() {
+        return Events({
+          from_date: params.startDate, 
+          to_date: params.endDate
+        })
+        // group each user's events by the day they were triggered,
+        // and count how many events they sent each day
+        .groupByUser([getDay], function(count, events) {
+          count = count || 0;
+          return count + events.length;
+        })
+        // filter out days where a user sent < 2 events
+        .filter(function(user_count) {
+          return user_count.value >= 2;
+        })
+        .groupBy(["key.1"], mixpanel.reducer.count());
+      }
+
+      function getDay(event) {
+        return new Date(event.time).toISOString().substr(0, 10);
+      }
+    </script>
+    <script id="cq-daily-active-thisMonth">
+      var today = new Date();
+      today = today.toISOString().split('T')[0];
+      var a = new Date();
+      var firstDayOfMonth = new Date(a.getFullYear(), a.getMonth(), 1).toISOString().split('T')[0];
+
+      function main() {
+        return Events({
+          from_date: firstDayOfMonth,
+          to_date: today
+        })
+        // group each user's events by the day they were triggered,
+        // and count how many events they sent each day
+        .groupByUser([getDay], function(count, events) {
+          count = count || 0;
+          return count + events.length;
+        })
+        // filter out days where a user sent < 2 events
+        .filter(function(user_count) {
+          return user_count.value >= 2;
+        })
+        .groupBy(["key.1"], mixpanel.reducer.count());
+      }
+
+      function getDay(event) {
+        return new Date(event.time).toISOString().substr(0, 10);
+      }
+    </script>
+
+    <script>
+
+
+      //setting some global variables
+      //weekly active(uniques) and weekly new users
+      var xAxisWeeklyActive = []
+      var yAxisWeeklyActive = []
+      var weeklyNewUseryAxis = []
+      var weeklyNewUserxAxis = []
+      
+      //monthly active(uniques) and monthly new Users
+      var monthlActivesXAxis = []
+      var monthlyActivesYAxis = []
+      var monthlyNewUserxAxis =[]
+      var monthlyNewUserData =[]
+
+      var outputArrayWeekly =[]
+      var outputArrayMonthly =[]
+      //end of global variables
+      
+      var allQueries = function() {
+        var newUsersToday = function(){
+          var newUsersTodayScript = $('#cq-new-users-today').html();
+          newUsersTodayScript = $.trim(newUsersTodayScript);
+    
+          MP.api.jql(newUsersTodayScript).done(function(results) {
+            var holder = results[0].key[0]
+            if(holder !== "Old Users"){
+              $('.current-users').text(addCommas(results[0].value)); 
+            }    
+          })
+        }
+        //function for top events and event count
+        var topEventsQuery = function() {
+          // params for top events
+          var params = {
+            type: 'general',
+            limit: 10
+          }
+          MP.api.topEvents(params).done(function(results) {
+                
+                var eventsArray = results.values()
+                params = {
+                  type:'general',
+                  unit:'month',
+                  interval: 6
+                }
+
+                MP.api.events(eventsArray[0],eventsArray[1],eventsArray[2],eventsArray[3],eventsArray[4],eventsArray[5],eventsArray[6],eventsArray[7],eventsArray[8],eventsArray[9], params).done(function(results){
+                  var graphData = {}
+                  var xAxis = [] 
+                  var objectArray = new Array()
+
+                  var dataObject = results.json
+                  
+                  $.each(results.json, function (index, value) {
+                    if(eventsArray[0] == index){
+                      $.each(value, function (index,value) {
+                         xAxis.push(index)
+                        graphData[index] = []
+                      })
+                    }
+                  });
+                  //loop through results.json match date to date key in graphData
+                  $.each(results.json, function (index, value) {              
+                    for (i = 0; i < 9; i++){
+                      objectArray =[]
+                      //when matched take the event name, set as key, set value pair as event count
+                      if(eventsArray[i] === index){
+                        //for each function to grab the event objects key
+                        $.each(value, function (index,value) {
+                          //loop through the graphdata (object we want to set on our graph) object and pull out date keys
+                          
+                          $.each(graphData, function(graphindex, graphvalue){
+                            // if date keys in graphdata (grpahindex value) mataches the date key in the events object add the event with it's event count for that month to the date key
+                            if (index === graphindex) { 
+                              var stuff = {}
+                              stuff[eventsArray[i]] = parseFloat(value)
+                              graphData[index].push(stuff)   
+                            }                          
+                          })
+                        })
+                      }
+                    }
+                  })
+
+
+                  sortedxAxis = xAxis.sort()
+      
+                  //math for average line
+
+                  var month1 = parseInt((dataObject[eventsArray[0]][sortedxAxis[0]]+dataObject[eventsArray[1]][sortedxAxis[0]]+dataObject[eventsArray[2]][sortedxAxis[0]]+dataObject[eventsArray[3]][sortedxAxis[0]]+dataObject[eventsArray[4]][sortedxAxis[0]]+dataObject[eventsArray[5]][sortedxAxis[0]])/6)
+
+                  var month2 = parseInt((dataObject[eventsArray[0]][sortedxAxis[1]]+dataObject[eventsArray[1]][sortedxAxis[1]]+dataObject[eventsArray[2]][sortedxAxis[1]]+dataObject[eventsArray[3]][sortedxAxis[1]]+dataObject[eventsArray[4]][sortedxAxis[1]]+dataObject[eventsArray[5]][sortedxAxis[1]])/6)
+
+                  var month3 = parseInt((dataObject[eventsArray[0]][sortedxAxis[2]]+dataObject[eventsArray[1]][sortedxAxis[2]]+dataObject[eventsArray[2]][sortedxAxis[2]]+dataObject[eventsArray[3]][sortedxAxis[2]]+dataObject[eventsArray[4]][sortedxAxis[2]]+dataObject[eventsArray[5]][sortedxAxis[2]])/6)
+
+                  var month4 = parseInt((dataObject[eventsArray[0]][sortedxAxis[3]]+dataObject[eventsArray[1]][sortedxAxis[0]]+dataObject[eventsArray[2]][sortedxAxis[3]]+dataObject[eventsArray[3]][sortedxAxis[3]]+dataObject[eventsArray[4]][sortedxAxis[3]]+dataObject[eventsArray[5]][sortedxAxis[3]])/6)
+
+                  var month5 = parseInt((dataObject[eventsArray[0]][sortedxAxis[4]]+dataObject[eventsArray[1]][sortedxAxis[4]]+dataObject[eventsArray[2]][sortedxAxis[4]]+dataObject[eventsArray[3]][sortedxAxis[4]]+dataObject[eventsArray[4]][sortedxAxis[4]]+dataObject[eventsArray[5]][sortedxAxis[4]])/6)
+
+                  var month6 = parseInt((dataObject[eventsArray[0]][sortedxAxis[5]]+dataObject[eventsArray[1]][sortedxAxis[5]]+dataObject[eventsArray[2]][sortedxAxis[5]]+dataObject[eventsArray[3]][sortedxAxis[5]]+dataObject[eventsArray[4]][sortedxAxis[5]]+dataObject[eventsArray[5]][sortedxAxis[5]])/6)
+
+                  
+                    $('#graph').highcharts({
+                      title: {
+                          text: 'Top Events and Total Event Counts'
+                      },
+                      subtitle:{
+                        text: 'Top Events Based Off Top 6 Events This Month'
+                      },
+                      xAxis: {
+                          categories: sortedxAxis
+                      },
+                      labels: {
+                          items: [{
+                              html: 'Total Event Count For Top Events: Last 6 Months',
+                              style: {
+                                  left: '50px',
+                                  top: '18px',
+                                  color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                              }
+                          }]
+                      },
+                      credits: {
+                          enabled: false
+                      },
+                      series: [{
+                          type: 'column',
+                          name: eventsArray[0],
+                          data: [dataObject[eventsArray[0]][sortedxAxis[0]],dataObject[eventsArray[0]][sortedxAxis[1]],dataObject[eventsArray[0]][sortedxAxis[2]],dataObject[eventsArray[0]][sortedxAxis[3]],dataObject[eventsArray[0]][sortedxAxis[4]],dataObject[eventsArray[0]][sortedxAxis[5]]]
+                      }, {
+                          type: 'column',
+                          name: eventsArray[1],
+                          data: [dataObject[eventsArray[1]][sortedxAxis[0]],dataObject[eventsArray[1]][sortedxAxis[1]],dataObject[eventsArray[1]][sortedxAxis[2]],dataObject[eventsArray[1]][sortedxAxis[3]],dataObject[eventsArray[1]][sortedxAxis[4]],dataObject[eventsArray[1]][sortedxAxis[5]]]
+                      }, {
+                          type: 'column',
+                          name: eventsArray[2],
+                          data: [dataObject[eventsArray[2]][sortedxAxis[0]],dataObject[eventsArray[2]][sortedxAxis[1]],dataObject[eventsArray[2]][sortedxAxis[2]],dataObject[eventsArray[2]][sortedxAxis[3]],dataObject[eventsArray[2]][sortedxAxis[4]],dataObject[eventsArray[2]][sortedxAxis[5]]]
+                      },{
+                          type: 'column',
+                          name: eventsArray[3],
+                          data: [dataObject[eventsArray[3]][sortedxAxis[0]],dataObject[eventsArray[3]][sortedxAxis[1]],dataObject[eventsArray[3]][sortedxAxis[2]],dataObject[eventsArray[3]][sortedxAxis[3]],dataObject[eventsArray[3]][sortedxAxis[4]],dataObject[eventsArray[3]][sortedxAxis[5]]]
+                      }, {
+                          type: 'column',
+                          name: eventsArray[4],
+                          data: [dataObject[eventsArray[4]][sortedxAxis[0]],dataObject[eventsArray[4]][sortedxAxis[1]],dataObject[eventsArray[4]][sortedxAxis[2]],dataObject[eventsArray[4]][sortedxAxis[3]],dataObject[eventsArray[4]][sortedxAxis[4]],dataObject[eventsArray[4]][sortedxAxis[5]]]
+                      }, {
+                          type: 'column',
+                          name: eventsArray[5],
+                          data: [dataObject[eventsArray[5]][sortedxAxis[0]],dataObject[eventsArray[5]][sortedxAxis[1]],dataObject[eventsArray[5]][sortedxAxis[2]],dataObject[eventsArray[5]][sortedxAxis[3]],dataObject[eventsArray[5]][sortedxAxis[4]],dataObject[eventsArray[5]][sortedxAxis[5]]]
+                      }, {
+                          type: 'spline',
+                          name: 'Combined Events Average Per Month',
+                          data: [month1,month2,month3,month4,month5,month6],
+                          marker: {
+                              lineWidth: 2,
+                              lineColor: Highcharts.getOptions().colors[3],
+                              fillColor: 'white'
+                          }
+                      },
+                      {
+                          type: 'pie',
+                          name: 'Total Event Count Last 6 Months',
+                          data: [{
+                              name: eventsArray[0],
+                              y: dataObject[eventsArray[0]][sortedxAxis[0]]+dataObject[eventsArray[0]][sortedxAxis[1]]+dataObject[eventsArray[0]][sortedxAxis[2]]+dataObject[eventsArray[0]][sortedxAxis[3]]+dataObject[eventsArray[0]][sortedxAxis[4]]+dataObject[eventsArray[0]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[0] // Jane's color
+                          }, {
+                              name: eventsArray[1],
+                              y: dataObject[eventsArray[1]][sortedxAxis[0]]+dataObject[eventsArray[1]][sortedxAxis[1]]+dataObject[eventsArray[1]][sortedxAxis[2]]+dataObject[eventsArray[1]][sortedxAxis[3]]+dataObject[eventsArray[1]][sortedxAxis[4]]+dataObject[eventsArray[1]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[1] // John's color
+                          }, {
+                              name: eventsArray[2],
+                              y: dataObject[eventsArray[2]][sortedxAxis[0]]+dataObject[eventsArray[2]][sortedxAxis[1]]+dataObject[eventsArray[2]][sortedxAxis[2]]+dataObject[eventsArray[2]][sortedxAxis[3]]+dataObject[eventsArray[2]][sortedxAxis[4]]+dataObject[eventsArray[2]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[2] // Joe's color
+                          },{
+                              name: eventsArray[3],
+                              y: dataObject[eventsArray[3]][sortedxAxis[0]]+dataObject[eventsArray[3]][sortedxAxis[1]]+dataObject[eventsArray[3]][sortedxAxis[2]]+dataObject[eventsArray[3]][sortedxAxis[3]]+dataObject[eventsArray[3]][sortedxAxis[4]]+dataObject[eventsArray[3]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[3] // Joe's color
+                          },{
+                              name: eventsArray[4],
+                              y: dataObject[eventsArray[4]][sortedxAxis[0]]+dataObject[eventsArray[4]][sortedxAxis[1]]+dataObject[eventsArray[4]][sortedxAxis[2]]+dataObject[eventsArray[4]][sortedxAxis[3]]+dataObject[eventsArray[4]][sortedxAxis[4]]+dataObject[eventsArray[4]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[4] // Joe's color
+                          },{
+                              name: eventsArray[5],
+                              y: dataObject[eventsArray[5]][sortedxAxis[0]]+dataObject[eventsArray[5]][sortedxAxis[1]]+dataObject[eventsArray[5]][sortedxAxis[2]]+dataObject[eventsArray[5]][sortedxAxis[3]]+dataObject[eventsArray[5]][sortedxAxis[4]]+dataObject[eventsArray[5]][sortedxAxis[5]],
+                              color: Highcharts.getOptions().colors[5] // Joe's color
+                          }],
+                          center: [100, 80],
+                          size: 60,
+                          showInLegend: false,
+                          dataLabels: {
+                              enabled: false
+                          }
+                      }],
+                       exporting: {
+                        enabled: true
+                      },
+                       navigation: {
+                        buttonOptions: {
+                          align: 'right'
+                          }
+                      }
+                    });
+                });            
+          });
+        }
+        var dailyActivesQuery = function(){       
+          /* Query for daily Active Users */
+          var dailyActives = $('#cq-daily-active-thisMonth').html();
+          dailyActivesScript = $.trim(dailyActives);
+
+          dailyActivesQuery = MP.api.jql(dailyActivesScript).done(function (data) {
+            var todayDailyActive =  (data.length - 1)
+            var activesToday =  data[todayDailyActive].value
+            $('.daily-actives').text(addCommas(activesToday));
+          })
+
+          /* Date Refresh */
+          var date = new Date();
+          var day = date.getDate()
+          var hours = date.getHours();
+          var convertedHours = hours <= 12 ? hours : hours - 12;
+          var ampm = hours >= 12 ? 'pm' : 'am';
+          var time = convertedHours.toString() + ':' + pad(date.getMinutes()).toString();
+          var month = getCurrentMonth();
+          var actualDay = getCurrentDay();
+          $('.date-month').text(month);
+          $('.date-actual-day').text(actualDay);
+          $('.date-day').text(day.toString());
+          $('.date-time').text(time);
+          $('.date-pm').text(ampm);      
+        }
+        var monthlyQuery = function(){
+          // get CQ script params for active users query
+          var newMonthlyActiveUserScript = $('#cq-monthly-active-users').html();
+          newMonthlyActiveUserScript = $.trim(newMonthlyActiveUserScript);
+
+          //placeholders for highchart graph
+          var placeholderObject = {}
+          var placeholderArray = []
+          var monthlyUniquesYAxis =[]
+          var monthlyUniquesXAxis =[]
+          MP.api.jql(newMonthlyActiveUserScript).done(function(results) {
+
+            var monthlyActivesTopBar = (results.length - 1)
+            var monthlyActivesToday =  results[monthlyActivesTopBar].value
+            $('.monthly-actives').text(addCommas(monthlyActivesToday));
+
+             $.each(results, function(index, value){
+              monthlyUniquesXAxis.push(value.key[0])
+            })
+            var weeklyNewUseryAxis =[]
+            $.each(results, function(index, value){
+              monthlyUniquesYAxis.push(value.value)
+            })
+
+            $('#monthlyActiveUsers').highcharts({
+                exporting: {
+                  chartOptions: { // specific options for the exported image
+                      plotOptions: {
+                          series: {
+                              dataLabels: {
+                                  enabled: true
+                              }
+                          }
+                      }
+                  },
+                  scale: 3,
+                  fallbackToExportServer: false
+                },
+                credits: {
+                        enabled: false
+                },
+                title: {
+                    text: 'Monthly Active Users'
+                },
+                xAxis: {
+                    categories: monthlyUniquesXAxis
+                },
+                yAxis: {
+                  title: {
+                      text: 'Active Users'
+                  }
+                },
+                series: [{
+                    type: 'spline',
+                    name: 'Monthly Active Users',
+                    data: monthlyUniquesYAxis
+                }],
+                 exporting: {
+                  enabled: true
+                },
+            });
+          
+            var monthlyNewUserxAxis = []
+            var monthlyNewUserData2 =[]
+            var newMonthlyNewUserScript = $('#cq-monthly-new-users').html();
+            newMonthlyNewUserScript = $.trim(newMonthlyNewUserScript);
+
+            MP.api.jql(newMonthlyNewUserScript).done(function(results) {
+              //sorting and set up for new users by months chart
+              $.each(results, function(index, value){
+                monthlyNewUserxAxis.push(value.key[0])
+              })
+              
+             
+              $.each(results, function(index, value){
+                monthlyNewUserData.push(value.value)
+              })
+              var a = monthlyNewUserxAxis.length
+              var b = monthlyNewUserData.length
+
+              if( b >= 6){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-6)],monthlyNewUserxAxis[(a-5)],monthlyNewUserxAxis[(a-4)],monthlyNewUserxAxis[(a-3)],monthlyNewUserxAxis[(a-2)],monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-6)],monthlyNewUserData[(b-5)],monthlyNewUserData[(b-4)],monthlyNewUserData[(b-3)],monthlyNewUserData[(b-2)],monthlyNewUserData[(b-1)]] 
+              }else if(b === 5){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-5)],monthlyNewUserxAxis[(a-4)],monthlyNewUserxAxis[(a-3)],monthlyNewUserxAxis[(a-2)],monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-5)],monthlyNewUserData[(b-4)],monthlyNewUserData[(b-3)],monthlyNewUserData[(b-2)],monthlyNewUserData[(b-1)]] 
+              }else if(b === 4){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-4)],monthlyNewUserxAxis[(a-3)],monthlyNewUserxAxis[(a-2)],monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-4)],monthlyNewUserData[(b-3)],monthlyNewUserData[(b-2)],monthlyNewUserData[(b-1)]] 
+              }else if(b === 3){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-3)],monthlyNewUserxAxis[(a-2)],monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-3)],monthlyNewUserData[(b-2)],monthlyNewUserData[(b-1)]] 
+              }else if(b ===2){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-2)],monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-2)],monthlyNewUserData[(b-1)]] 
+              }else if(b===1){
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(a-1)]] 
+                monthlyNewUserData =  [monthlyNewUserData[(b-1)]] 
+
+              }
+              $('#monthlyNewUsers').highcharts({
+                        title: {
+                            text: 'New Users Per Month'
+                        },
+                        credits: {
+                          enabled: false
+                        },
+                        xAxis: {
+                            categories: monthlyNewUserxAxis
+                        },
+                        yAxis: {
+                          title: {
+                              text: 'New Users'
+                          }
+                        },
+                        series: [{
+                            type: 'spline',
+                            name: 'Monthly New Users',
+                            data: monthlyNewUserData
+                        }],
+                         exporting: {
+                          enabled: true
+                        },
+              });
+              
+              //do math to figure out new/active users for the month
+              
+              var numOfMonths = monthlyNewUserxAxis.length
+              var uniquesLenght = monthlyUniquesYAxis.length
+
+              if(monthlyNewUserxAxis.length >= 6){
+                data = [((monthlyNewUserData[(numOfMonths-6)]/monthlyUniquesYAxis[(uniquesLenght-6)])*100),((monthlyNewUserData[(numOfMonths-5)]/monthlyUniquesYAxis[(uniquesLenght-5)])*100),((monthlyNewUserData[(numOfMonths-4)]/monthlyUniquesYAxis[(uniquesLenght-4)])*100),((monthlyNewUserData[(numOfMonths-3)]/monthlyUniquesYAxis[(uniquesLenght-3)])*100),((monthlyNewUserData[(numOfMonths-2)]/monthlyUniquesYAxis[(uniquesLenght-2)])*100),((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis =[monthlyNewUserxAxis[(numOfMonths-6)],monthlyNewUserxAxis[(numOfMonths-5)],monthlyNewUserxAxis[(numOfMonths-4)],monthlyNewUserxAxis[(numOfMonths-3)],monthlyNewUserxAxis[(numOfMonths-2)],monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else if(monthlyNewUserxAxis.length === 5){
+                data = [((monthlyNewUserData[(numOfMonths-5)]/monthlyUniquesYAxis[(uniquesLenght-5)])*100),((monthlyNewUserData[(numOfMonths-4)]/monthlyUniquesYAxis[(uniquesLenght-4)])*100),((monthlyNewUserData[(numOfMonths-3)]/monthlyUniquesYAxis[(uniquesLenght-3)])*100),((monthlyNewUserData[(numOfMonths-2)]/monthlyUniquesYAxis[(uniquesLenght-2)])*100),((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis = [monthlyNewUserxAxis[(numOfMonths-5)],monthlyNewUserxAxis[(numOfMonths-4)],monthlyNewUserxAxis[(numOfMonths-3)],monthlyNewUserxAxis[(numOfMonths-2)],monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else if(monthlyNewUserxAxis.length === 4){
+                data = [((monthlyNewUserData[(numOfMonths-4)]/monthlyUniquesYAxis[(uniquesLenght-4)])*100),((monthlyNewUserData[(numOfMonths-3)]/monthlyUniquesYAxis[(uniquesLenght-3)])*100),((monthlyNewUserData[(numOfMonths-2)]/monthlyUniquesYAxis[(uniquesLenght-2)])*100),((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis =[monthlyNewUserxAxis[(numOfMonths-4)],monthlyNewUserxAxis[(numOfMonths-3)],monthlyNewUserxAxis[(numOfMonths-2)],monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else if(monthlyNewUserxAxis.length === 3){
+                data = [((monthlyNewUserData[(numOfMonths-3)]/monthlyUniquesYAxis[(uniquesLenght-3)])*100),((monthlyNewUserData[(numOfMonths-2)]/monthlyUniquesYAxis[(uniquesLenght-2)])*100),((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis =[monthlyNewUserxAxis[(numOfMonths-3)],monthlyNewUserxAxis[(numOfMonths-2)],monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else if(monthlyNewUserxAxis.length === 2){
+                data = [((monthlyNewUserData[(numOfMonths-2)]/monthlyUniquesYAxis[(uniquesLenght-2)])*100),((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis =[monthlyNewUserxAxis[(numOfMonths-2)],monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else if(monthlyNewUserxAxis.length === 1){
+                data = [((monthlyNewUserData[(numOfMonths-1)]/monthlyUniquesYAxis[(uniquesLenght-1)])*100)]
+                monthlyNewUserxAxis =[monthlyNewUserxAxis[(numOfMonths-1)]]
+              }else{}
+             
+              $('#MonthlyActiveAndNewPercentage').highcharts({
+                      title: {
+                          text: 'New Monthly Users Over Monthly Active User'
+                      },
+                      credits: {
+                          enabled: false
+                      },
+                      xAxis: {
+                          categories: monthlyNewUserxAxis
+                      },
+                      yAxis: {
+                        title: {
+                            text: '% New Over Active'
+                        }
+                      },
+                      tooltip:{
+                        shared: true,
+                        valueDecimals: 1,
+                        valueSuffix: " %"
+                      },
+                      series: [{
+                          type: 'spline',
+                          name: 'New Monthly Users Over Monthly Active User',
+                          data: data
+                      }],
+                       exporting: {
+                        enabled: true
+                      },
+              });
+              
+            })
+          })
+        }
+        var weeklyQuery = function(){
+          var newWeeklyActiveUsersScript = $('#cq-weekly-active-users').html();
+          newWeeklyActiveUsersScript = $.trim(newWeeklyActiveUsersScript);
+          
+          var weeklyUniquesYAxisPlaceholder =[]
+          var weeklyUniquesYAxis =[]
+          var weeklyUniquesXAxis =[]
+          // 12 week query for Uniques 
+          
+          MP.api.jql(newWeeklyActiveUsersScript).done(function(results) {
+            $.each(results, function(index, value){
+              if (value.key[0] !== null) {
+
+                weeklyUniquesXAxis.push(value.key[0])
+              }
+            })
+            var weeklyNewUseryAxis =[]
+            $.each(results, function(index, value){
+              if (value.key[0] !== null) {
+               weeklyUniquesYAxis.push(value.value)
+              }
+            })
+
+            $('#weeklyActiveUsers').highcharts({
+              title: {
+                  text: 'Weekly Active Users'
+              },
+              credits: {
+                          enabled: false
+              },
+              xAxis: {
+                  categories: weeklyUniquesXAxis
+              },
+              yAxis: {
+                title: {
+                    text: 'Active Users'
+                }
+              },
+              series: [{
+                  type: 'spline',
+                  name: 'Weekly Active Users',
+                  data: weeklyUniquesYAxis
+              }],
+               exporting: {
+                enabled: true
+              },
+            });
+            var weeklyNewUserxAxis = []
+            var weeklyNewUserData2 =[]
+            var outputArrayWeekly = []
+            var output = 0
+            
+            var newWeeklyNewUserScript = $('#cq-weekly-new-users').html();
+            newWeeklyNewUserScript = $.trim(newWeeklyNewUserScript);
+
+            MP.api.jql(newWeeklyNewUserScript).done(function(results) {
+                  console.log("weekly new users results")
+                  console.log(results)
+                  var weeklyNewUserxAxis =[]
+                  $.each(results, function(index, value){
+                   if(value.key[0] !== null){
+                    weeklyNewUserxAxis.push(value.key[0])
+                    }
+                  })
+                  var weeklyNewUseryAxis =[]
+                  $.each(results, function(index, value){
+                    if(value.key[0] !== null){
+                      weeklyNewUseryAxis.push(value.value)
+                    }
+                  })
+                  $('#weeklyNewUsers').highcharts({
+                            title: {
+                                text: 'New Users Per Week'
+                            },
+                            
+                            xAxis: {
+                                categories: weeklyNewUserxAxis
+                            },
+                            yAxis: {
+                              title: {
+                                  text: 'New Users'
+                              }
+                            },
+                            series: [{
+                                type: 'spline',
+                                name: 'Weekly New Users',
+                                data: weeklyNewUseryAxis
+                            }],
+                             exporting: {
+                              enabled: true
+                            },
+                  });
+                console.log(weeklyNewUserxAxis)
+                console.log(weeklyNewUseryAxis.length)
+                console.log(weeklyNewUseryAxis)
+                console.log(weeklyUniquesYAxis)
+
+                var data = []
+                for (var i = 0; i < weeklyNewUseryAxis.length; i++) {
+                  data.push(parseFloat((weeklyNewUseryAxis[i]/weeklyUniquesYAxis[i])*100))
+                }
+                console.log(data)
+                
+                    $('#weeklyActiveAndNewPercentage').highcharts({
+                            title: {
+                                text: 'New Weekly Users Over Weekly Active User'
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            xAxis: {
+                                categories: weeklyNewUserxAxis
+                            },
+                            yAxis: {
+                              title: {
+                                  text: '% New Over Active'
+                              }
+                            },
+                            tooltip:{
+                              shared: true,
+                              valueDecimals: 1,
+                              valueSuffix: " %"
+                            },
+                            series: [{
+                                type: 'spline',
+                                name: 'New Weekly Users Over Weekly Active User',
+                                data: data
+                            }],
+                             exporting: {
+                              enabled: true
+                            },
+                    });
+                })
+            })
+          //})
+        }
+        var dauOverMausQuery = function() {
+          // get CQ script params for monthly active users and daily acitve users last month
+          var monthlyActiveUserScript = $('#cq-monthly-active-users').html();
+          monthlyActiveUserScript = $.trim(monthlyActiveUserScript);
+
+          //placeholders for highchart graph
+          var placeholderObject = {}
+          var placeholderArray = []
+          var monthlyUniquesYAxis =[]
+          var monthlyUniquesXAxis =[]
+          //using same query to get mau for the last 6 months
+          MP.api.jql(monthlyActiveUserScript).done(function(monthlyresults) {
+
+             //Uniques for this month by day
+              var lastMonthUniquesbyDayQueryResults = []
+              var thisMonthUniquesbyDayArray = []
+              var weekOneArray = [0,0,0,0,0,0,0]
+              var weekTwoArray = [0,0,0,0,0,0,0]
+              var weekThreeArray = [0,0,0,0,0,0,0]
+              var weekFourArray = [0,0,0,0,0,0,0]
+              var weekFiveArray = [0,0,0,0,0,0,0]
+                
+              //cq for daily active
+              var newUsersTodayScript = $('#cq-daily-active-lastMonth').html();
+              newUsersTodayScript = $.trim(newUsersTodayScript);
+        
+              //dau query last month daus
+              MP.api.jql(newUsersTodayScript).done(function(results) {
+                 //set variables for week and days
+                var dayOfWeek 
+                var weekinMonth 
+                var numOfMonths = monthlyresults.length
+                /*
+                need to find beginning of the month and day of week (sat, sun, thurs) for xAxis, then count to sunday, when sunday increment the week up one.
+                Additionally need to place each day's dau's in approiate day of week, and week in month slot
+                */
+                //find the starting week. i.e. is this the first week of the month or third week. Really just for new projects that start mid month so traffic is set to "week one" when it should be something like "week 3"
+                var holder = parseFloat(results[0].key[0].split("-")[2])
+                weekinMonth = (holder/7)
+ 
+                  for (var i =0; i < results.length; i++) { 
+                    dayOfWeek = moment(results[i].key[0]).day()
+
+                    if (weekinMonth > 0 && weekinMonth <= 1) {
+                      if(dayOfWeek === 0){
+                        weekOneArray[6] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 1){
+                        weekOneArray[0] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 2){
+                        weekOneArray[1] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 3){
+                        weekOneArray[2] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 4){
+                        weekOneArray[3] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 5){
+                        weekOneArray[4] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 6){
+                        weekOneArray[5] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else{}
+                    } else if (weekinMonth > 1 && weekinMonth <= 2) {
+
+                      if(dayOfWeek === 0){
+                        weekTwoArray[6] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 1){
+                        weekTwoArray[0] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 2){
+                        weekTwoArray[1] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 3){
+                        weekTwoArray[2] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 4){
+                        weekTwoArray[3] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 5){
+                        weekTwoArray[4] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 6){
+                        weekTwoArray[5] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else{}
+                    }else if (weekinMonth > 2 && weekinMonth <= 3) {
+
+                      if(dayOfWeek === 0){
+                        weekThreeArray[6] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 1){
+                        weekThreeArray[0] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 2){
+                        weekThreeArray[1] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 3){
+                        weekThreeArray[2] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 4){
+                        weekThreeArray[3] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 5){
+                        weekThreeArray[4] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 6){
+                        weekThreeArray[5] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else{}
+                    }else if (weekinMonth > 3 && weekinMonth <= 4) {
+
+                      if(dayOfWeek === 0){
+                        weekFourArray[6] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 1){
+                        weekFourArray[0] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 2){
+                        weekFourArray[1] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 3){
+                        weekFourArray[2] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 4){
+                        weekFourArray[3] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 5){
+                        weekFourArray[4] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 6){
+                        weekFourArray[5] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else{}
+                    }else if(weekinMonth > 4 && weekinMonth <= 5){
+    
+                      if(dayOfWeek === 0){
+                        weekFiveArray[6] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 1){
+                        weekFiveArray[0] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 2){
+                        weekFiveArray[1] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 3){
+                        weekFiveArray[2] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 4){
+                        weekFiveArray[3] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 5){
+                        weekFiveArray[4] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else if(dayOfWeek === 6){
+                        weekFiveArray[5] = (((results[i].value/monthlyresults[(numOfMonths-2)].value).toFixed(3))*100)
+                      }else{}
+                    }else{}
+                    if (dayOfWeek === 0) {
+    
+                      weekinMonth = weekinMonth + 1;
+                    }
+                  }
+                $('#dau-over-mau-graph').highcharts({
+                  title: {
+                      text: 'DAU\'s over MAU\'s Last Month'
+                  },
+                  xAxis: {
+                      categories: ["Mon", "Tue", "Wed","Thu", "Fri", "Sat", "Sun"]
+                  },
+                  yAxis: {
+                    title: {
+                        text: '% DAU over MAU'
+                    }
+                  },
+                  credits: {
+                      enabled: false
+                  },
+                  tooltip:{
+                    shared: true,
+                    valueDecimals: 1,
+                    valueSuffix: " %"
+                  },
+                  series: [{
+                      type: 'spline',
+                      name: 'Week One DAU\'s MAU\'s',
+                      data: weekOneArray
+                  },{
+                      type: 'spline',
+                      name: 'Week Two DAU\'s MAU\'s',
+                      data: weekTwoArray
+                  },{
+                      type: 'spline',
+                      name: 'Week Three DAU\'s MAU\'s',
+                      data: weekThreeArray
+                  },{
+                      type: 'spline',
+                      name: 'Week Four DAU\'s MAU\'s',
+                      data: weekFourArray
+                  },{
+                      type: 'spline',
+                      name: 'Week Five DAU\'s MAU\'s',
+                      data: weekFiveArray
+                  }],
+                  legend: {
+                  align: 'center',
+                  },
+                  exporting: {
+                    enabled: true
+                    },
+                });
+                
+                //dau for this month
+                var dauThisMonth = $('#cq-daily-active-thisMonth').html();
+                dauThisMonthScript = $.trim(dauThisMonth);
+                MP.api.jql(dauThisMonthScript).done(function(dauThisMonthresults) {
+                  //set variables for week and days
+                  var dayOfWeekThisMonth
+                  var weekinMonthThisMonth
+       
+                  var weekOneArray = [0,0,0,0,0,0,0]
+                  var weekTwoArray = [0,0,0,0,0,0,0]
+                  var weekThreeArray = [0,0,0,0,0,0,0]
+                  var weekFourArray = [0,0,0,0,0,0,0]
+                  var weekFiveArray = [0,0,0,0,0,0,0]
+                  /*
+                  need to find beginning of the month and day of week (sat, sun, thurs) for xAxis, then count to sunday, when sunday increment the week up one.
+                  Additionally need to place each day's dau's in approiate day of week, and week in month slot
+                  */
+                  console.log(results)
+                  console.log(results[0].key[0])
+                  console.log(results[0].key[0].split("-")[1])
+                  holder = parseFloat(dauThisMonthresults[0].key[0].split("-")[2])
+                  weekinMonthThisMonth = (holder/7)
+                  for (var i =0; i < dauThisMonthresults.length; i++) { 
+                    dayOfWeekThisMonth = moment(dauThisMonthresults[i].key[0]).day() 
+                    if (weekinMonthThisMonth > 0 && weekinMonthThisMonth <= 1) {
+                      if(dayOfWeekThisMonth === 0){
+                        weekOneArray[6] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 1){
+                        weekOneArray[0] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 2){
+                        weekOneArray[1] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 3){
+                        weekOneArray[2] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 4){
+                        weekOneArray[3] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 5){
+                        weekOneArray[4] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 6){
+                        weekOneArray[5] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else{}
+                    
+                    } else if (weekinMonthThisMonth > 1 && weekinMonthThisMonth <= 2) {
+         
+                      if(dayOfWeekThisMonth === 0){
+                        weekTwoArray[6] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 1){
+                        weekTwoArray[0] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 2){
+                        weekTwoArray[1] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 3){
+                        weekTwoArray[2] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 4){
+                        weekTwoArray[3] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 5){
+                        weekTwoArray[4] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 6){
+                        weekTwoArray[5] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else{}
+                    
+                    }else if (weekinMonthThisMonth > 2 && weekinMonthThisMonth <= 3) {
+
+                      if(dayOfWeekThisMonth === 0){
+                        weekThreeArray[6] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 1){
+                        weekThreeArray[0] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 2){
+                        weekThreeArray[1] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 3){
+                        weekThreeArray[2] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 4){
+                        weekThreeArray[3] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 5){
+                        weekThreeArray[4] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 6){
+                        weekThreeArray[5] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else{}
+                    
+                    }else if (weekinMonthThisMonth > 3 && weekinMonthThisMonth <= 4) {
+
+                      if(dayOfWeekThisMonth === 0){
+                        weekFourArray[6] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 1){
+                        weekFourArray[0] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 2){
+                        weekFourArray[1] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 3){
+                        weekFourArray[2] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 4){
+                        weekFourArray[3] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 5){
+                        weekFourArray[4] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 6){
+                        weekFourArray[5] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else{}
+                    
+                    }else if(weekinMonthThisMonth > 5){
+
+                      if(dayOfWeekThisMonth === 0){
+                        weekFiveArray[6] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 1){
+                        weekFiveArray[0] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 2){
+                        weekFiveArray[1] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 3){
+                        weekFiveArray[2] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 4){
+                        weekFiveArray[3] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 5){
+                        weekFiveArray[4] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else if(dayOfWeekThisMonth === 6){
+                        weekFiveArray[5] = (((dauThisMonthresults[i].value/monthlyresults[(numOfMonths-1)].value).toFixed(3))*100)
+                      }else{}
+                    }else{}
+                    if (dayOfWeekThisMonth === 0) {
+                      weekinMonthThisMonth = weekinMonthThisMonth + 1;
+                    }
+                  }
+                  $('#dau-over-mau-graph-2').highcharts({
+                    title: {
+                        text: 'DAU\'s over MAU\'s This Month'
+                    },
+                    xAxis: {
+                        categories: ["Mon", "Tue", "Wed","Thu", "Fri", "Sat", "Sun"]
+                    },
+                    yAxis: {
+                      title: {
+                          text: '% DAU over MAU'
+                      }
+                    },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip:{
+                      shared: true,
+                      valueDecimals: 1,
+                      valueSuffix: " %"
+                    },
+                    series: [{
+                        type: 'spline',
+                        name: 'Week One DAU\'s MAU\'s',
+                        data: weekOneArray
+                    },{
+                        type: 'spline',
+                        name: 'Week Two DAU\'s MAU\'s',
+                        data: weekTwoArray
+                    },{
+                        type: 'spline',
+                        name: 'Week Three DAU\'s MAU\'s',
+                        data: weekThreeArray
+                    },{
+                        type: 'spline',
+                        name: 'Week Four DAU\'s MAU\'s',
+                        data: weekFourArray
+                    },{
+                        type: 'spline',
+                        name: 'Week Five DAU\'s MAU\'s',
+                        data: weekFiveArray
+                    }],
+                    legend: {
+                    align: 'center',
+                    },
+                    exporting: {
+                      enabled: true
+                      },
+                  });
+                })
+
+                
+                
+              })            
+          })      
+        }
+      
+        //run all queries
+        dailyActivesQuery();
+        newUsersToday();
+        weeklyQuery()
+        monthlyQuery()
+        dauOverMausQuery()
+        topEventsQuery()
+
+        //refresh top bar
+        setInterval(dailyActivesQuery, 600000);
+        setInterval(newUsersToday, 1860000);
+        setInterval(monthlyQuery, 1920000);
+        setInterval(weeklyQuery, 1980000);
+
+        
+      }
+      
+      
+      //formatting stuff for topbar
+      function addCommas(intNum) {
+        return (intNum + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+      }
+      function pad(d) {
+          return (d < 10) ? '0' + d.toString() : d.toString();
+      }
+      function getCurrentMonth(){
+          var d = new Date();
+          var month = new Array();
+          month[0] = "JAN"; 
+          month[1] = "FEB";
+          month[2] = "MAR";
+          month[3] = "APR";
+          month[4] = "MAY";
+          month[5] = "JUNE";
+          month[6] = "JULY";
+          month[7] = "AUG";
+          month[8] = "SEPT";
+          month[9] = "OCT";
+          month[10] = "NOV";
+          month[11] = "DEC";
+          var n = month[d.getMonth()];
+          return n;
+      }
+      function getCurrentDay(){
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0]=  "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+            var n = weekday[d.getDay()];
+            return n;
+      }
+      //end of formatting for topbar
+
+      $(document).ready(function() {
+        allQueries()
+      })
+
+      
+     
+
+
+    </script>
+
+
   </body>
 </html>
+
